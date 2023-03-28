@@ -4,9 +4,8 @@ import seminar01.weapons.Weapons;
 
 import java.util.Random;
 
-public abstract class BaseHero {
+public abstract class BaseHero implements GameInterface {
     public String name;
-    protected String class_name;
 
     protected int x;
     protected int y;
@@ -21,20 +20,29 @@ public abstract class BaseHero {
 
     @Override
     public String toString() {
-        return name + " " + hp + " " + armor + " " + class_name;
+        return this.getInfo() + " " + this.name + " Здоровье: " + this.hp + " Броня: " + this.armor;
     }
 
-    public BaseHero(int hp, String name, int x, int y, int armor, int[] damage, String class_name){
+    public BaseHero(int hp, String name, int x, int y, int armor, int[] damage) {
         this.hp = hp;
         this.name = name;
         this.x = x;
         this.y = y;
         this.armor = armor;
         this.damage = damage;
-        this.class_name = class_name;
     }
 
-    protected int getInt(){
+    protected int getInt() {
         return 1;
+    }
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return getClass().getSimpleName();
     }
 }
