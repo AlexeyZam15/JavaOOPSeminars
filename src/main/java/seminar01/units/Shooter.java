@@ -1,23 +1,26 @@
 package seminar01.units;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public abstract class Shooter extends BaseHero {
 
-    int arrows;
+    protected int arrows;
 
-    int accuracy;
+    protected int accuracy;
 
-    public Shooter(int hp, String name, int x, int y, int armor, int[] damage, int arrows, int accuracy) {
-        super(hp, name, x, y, armor, damage);
+    public Shooter(int hp, String name, boolean team, int armor, int[] damage, int arrows, int accuracy) {
+        super(hp, name, team, armor, damage);
         this.arrows = arrows;
         this.accuracy = accuracy;
     }
 
-    protected void shoot() {
-        System.out.println("Shoot!");
+    protected void shoot(BaseHero enemy) {
+//        enemy.getDamage(damage[Random ]);
     }
 
-    @Override
-    public void step(){
-        System.out.println("Shooter");
-    };
+    public void step(ArrayList<BaseHero> enemyTeam) {
+        if (hp <= 0 || arrows <= 0) return;
+        shoot(findClosestEnemy(enemyTeam));
+    }
 }
