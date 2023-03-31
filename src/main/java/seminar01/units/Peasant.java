@@ -8,6 +8,6 @@ public class Peasant extends BaseHero {
 
     @Override
     public String getInfo() {
-        return "Крестьянин";
+        return "Крестьянин " + name;
     }
 }

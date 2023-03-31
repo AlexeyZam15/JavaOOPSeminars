@@ -8,6 +8,6 @@ public class Thief extends BaseHero {
 
     @Override
     public String getInfo() {
-        return "Вор";
+        return "Вор " + name;
     }
 }

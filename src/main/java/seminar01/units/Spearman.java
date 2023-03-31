@@ -13,6 +13,6 @@ public class Spearman extends BaseHero {
 
     @Override
     public String getInfo() {
-        return "Копейщик";
+        return "Копейщик " + name;
     }
 }

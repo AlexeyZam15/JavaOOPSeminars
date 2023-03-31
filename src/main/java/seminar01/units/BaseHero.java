@@ -1,6 +1,5 @@
 package seminar01.units;
 
-import seminar01.Main;
 import seminar01.Names;
 import seminar01.weapons.Weapons;
 
@@ -8,20 +7,22 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class BaseHero implements GameInterface {
+
+    protected Coords position;
+
     protected static int count;
+
+    protected String class_name;
 
     protected boolean team;
 
-    public String name;
+    protected String name;
 
     protected static int lastFirstTeamX = 0;
     protected static int lastFirstTeamY = 0;
 
     protected static int lastSecondTeamX = 9;
     protected static int lastSecondTeamY = 0;
-
-    protected int x;
-    protected int y;
 
     protected int hp;
     protected int max_hp;
@@ -31,24 +32,25 @@ public abstract class BaseHero implements GameInterface {
 
     protected Weapons weapon;
 
+    public String getHeroName(){
+        return name;
+    }
     @Override
     public String toString() {
         return this.getInfo() + " " + this.name + " Здоровье: " + this.hp + " Броня: " + this.armor;
     }
 
     public String getPosition() {
-        return "x: " + this.x + " y: " + this.y;
+        return position.toString();
     }
 
     public BaseHero(int hp, String name, boolean team, int armor, int[] damage) {
         this.hp = hp;
         this.name = name;
         if (team) {
-            this.x = lastFirstTeamX;
-            this.y = lastFirstTeamY++;
+            this.position = new Coords(lastFirstTeamX, lastFirstTeamY++);
         } else {
-            this.x = lastSecondTeamX;
-            this.y = lastSecondTeamY++;
+            this.position = new Coords(lastSecondTeamX, lastSecondTeamY++);
         }
         this.armor = armor;
         this.damage = damage;
@@ -57,11 +59,6 @@ public abstract class BaseHero implements GameInterface {
 
     protected int getInt() {
         return 1;
-    }
-
-    @Override
-    public void step() {
-
     }
 
     @Override
@@ -79,14 +76,14 @@ public abstract class BaseHero implements GameInterface {
 
     public BaseHero findClosestEnemy(ArrayList<BaseHero> enemyTeam) {
         BaseHero closestEnemy = enemyTeam.get(0);
-        double distance = Math.sqrt(Math.pow(enemyTeam.get(0).x - this.x, 2) + Math.pow(enemyTeam.get(0).y - this.y, 2));
+        double distance = Coords.getDistance(this.position, enemyTeam.get(0).position);
         double minDistance = distance;
-        for (BaseHero enemy : enemyTeam) {
-            if (enemy.hp <= 0) continue;
-            distance = Math.sqrt(Math.pow(enemy.x - this.x, 2) + Math.pow(enemy.y - this.y, 2));
+        for (int i = 1; i < enemyTeam.size(); i++) {
+            if (enemyTeam.get(i).hp <= 0) continue;
+            distance = Coords.getDistance(this.position, enemyTeam.get(i).position);
             if (minDistance > distance) {
                 minDistance = distance;
-                closestEnemy = enemy;
+                closestEnemy = enemyTeam.get(i);
             }
         }
         return closestEnemy;
@@ -96,5 +93,10 @@ public abstract class BaseHero implements GameInterface {
             this.hp -= damage;
         }
         // else { die(); }
+    }
+
+    @Override
+    public void step(ArrayList<BaseHero> enemyTeam) {
+
     }
 }

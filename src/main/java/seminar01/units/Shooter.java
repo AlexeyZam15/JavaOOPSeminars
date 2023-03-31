@@ -16,11 +16,16 @@ public abstract class Shooter extends BaseHero {
     }
 
     protected void shoot(BaseHero enemy) {
-//        enemy.getDamage(damage[Random ]);
+        int dmg = new Random().nextInt(damage[0],damage[1]);
+        enemy.getDamage(dmg);
+        System.out.println(enemy.getInfo() + " получил(а) урон: " + dmg);
     }
 
     public void step(ArrayList<BaseHero> enemyTeam) {
+        System.out.println("Ходит " + getInfo());
         if (hp <= 0 || arrows <= 0) return;
-        shoot(findClosestEnemy(enemyTeam));
+        BaseHero closestEnemy = findClosestEnemy(enemyTeam);
+        System.out.println("Найден ближайший противник: " + closestEnemy.getInfo());
+        shoot(closestEnemy);
     }
 }

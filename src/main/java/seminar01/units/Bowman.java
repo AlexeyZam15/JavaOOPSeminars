@@ -8,7 +8,7 @@ public class Bowman extends Shooter {
 
     @Override
     public String getInfo() {
-        return "Лучник";
+        return "Лучник " + name;
     }
 }
 

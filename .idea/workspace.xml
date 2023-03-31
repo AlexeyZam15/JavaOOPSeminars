@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar02 progress">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added homework03 progress">
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Bowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Bowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Crossbowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Thief.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +49,8 @@
     "last_opened_file_path": "C:/Users/wolfy/Downloads/JavaOOPSeminars",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,13 +83,30 @@
       <option name="project" value="LOCAL" />
       <updated>1679995852552</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added seminar03 progress">
+      <created>1680253389820</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680253389820</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added homework03 progress">
+      <created>1680280912465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680280912465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization commit" />
     <MESSAGE value="added seminar01" />
     <MESSAGE value="added seminar02 progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="added seminar02 progress" />
+    <MESSAGE value="added seminar03 progress" />
+    <MESSAGE value="added homework04 progress" />
+    <MESSAGE value="added homework03 progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="added homework03 progress" />
   </component>
 </project>

@@ -16,6 +16,6 @@ public class Monk extends BaseHero {
 
     @Override
     public String getInfo() {
-        return "Монах";
+        return "Монах " + name;
     }
 }

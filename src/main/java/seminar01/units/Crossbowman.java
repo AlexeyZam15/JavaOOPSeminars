@@ -8,6 +8,6 @@ public class Crossbowman extends Shooter {
 
     @Override
     public String getInfo() {
-        return "Арбалетчик";
+        return "Арбалетчик " + name;
     }
 }

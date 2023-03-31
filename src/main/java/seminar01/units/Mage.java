@@ -19,7 +19,7 @@ public class Mage extends BaseHero {
 
     @Override
     public String getInfo() {
-        return "Маг";
+        return "Маг " + name;
     }
 
 }
