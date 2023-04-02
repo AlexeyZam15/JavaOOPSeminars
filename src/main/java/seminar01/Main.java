@@ -1,5 +1,6 @@
 package seminar01;
 
+import seminar01.teams.Team;
 import seminar01.units.*;
 
 import java.util.ArrayList;
@@ -17,27 +18,38 @@ public class Main {
 
 //        heroes.forEach(n -> System.out.println(n.getInfo() + " " + n.name));
 
-        ArrayList<BaseHero> firstTeam = createFirstTeam();
+//        ArrayList<BaseHero> firstTeam = createTeam(true);
 
-        ArrayList<BaseHero> secondTeam = createSecondTeam();
+        Team<BaseHero> firstTeam = new Team<BaseHero>("Хаос", true, 10);
 
-        System.out.println("Первая команда\n" + "_".repeat(40));
+        Team<BaseHero> secondTeam = new Team<BaseHero>("Свет", false, 10);
+
+//        ArrayList<BaseHero> secondTeam = createTeam(false);
+
+        printHeader("Расположение");
+        printHeader("Команда " + firstTeam.getTeamName());
         firstTeam.forEach(n -> System.out.println(n.getHeroName() + " " + n.getPosition()));
-        System.out.println("Вторая команда\n" + "_".repeat(40));
+        printHeader("Команда " + secondTeam.getTeamName());
         secondTeam.forEach(n -> System.out.println(n.getHeroName() + " " + n.getPosition()));
 
-        System.out.println("Ходы\n" + "_".repeat(40));
+        printHeader("Ходы");
 //        firstTeam.forEach(n -> System.out.println(n.getInfo()));
+        printHeader("Команда " + firstTeam.getTeamName());
         firstTeam.forEach(n -> n.step(secondTeam));
 //        secondTeam.forEach(n -> System.out.println(n.getInfo()));
+        printHeader("Команда " + secondTeam.getTeamName());
         secondTeam.forEach(n -> n.step(firstTeam));
 
 //        System.out.println(firstTeam.get(1).findClosestEnemy(secondTeam));
 
     }
 
+    public static void printHeader(String text){
+        System.out.print("_".repeat(40) + "\n" + text + "\n" + "_".repeat(40) + "\n");
+    }
 
-    private static String getName() {
+
+    public static String getName() {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
 
@@ -65,61 +77,31 @@ public class Main {
 //    }
 
 
-    public static ArrayList<BaseHero> createFirstTeam() {
+    public static ArrayList<BaseHero> createTeam(boolean firstTeam) {
         ArrayList<BaseHero> heroes = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             int random = new Random().nextInt(6);
             switch (random) {
                 case 0:
-                    heroes.add(new Bowman(getName(), true));
+                    heroes.add(new Bowman(getName(), firstTeam));
                     break;
                 case 1:
-                    heroes.add(new Crossbowman(getName(), true));
+                    heroes.add(new Crossbowman(getName(), firstTeam));
                     break;
                 case 2:
-                    heroes.add(new Mage(getName(), true));
+                    heroes.add(new Mage(getName(), firstTeam));
                     break;
                 case 3:
-                    heroes.add(new Monk(getName(), true));
+                    heroes.add(new Monk(getName(), firstTeam));
                     break;
                 case 4:
-                    heroes.add(new Spearman(getName(), true));
+                    heroes.add(new Spearman(getName(), firstTeam));
                     break;
                 case 5:
-                    heroes.add(new Thief(getName(), true));
+                    heroes.add(new Thief(getName(), firstTeam));
                     break;
                 default:
-                    heroes.add(new Peasant(getName(), true));
-            }
-        }
-        return heroes;
-    }
-
-    public static ArrayList<BaseHero> createSecondTeam() {
-        ArrayList<BaseHero> heroes = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            int random = new Random().nextInt(6);
-            switch (random) {
-                case 0:
-                    heroes.add(new Bowman(getName(), false));
-                    break;
-                case 1:
-                    heroes.add(new Crossbowman(getName(), false));
-                    break;
-                case 2:
-                    heroes.add(new Mage(getName(), false));
-                    break;
-                case 3:
-                    heroes.add(new Monk(getName(), false));
-                    break;
-                case 4:
-                    heroes.add(new Spearman(getName(), false));
-                    break;
-                case 5:
-                    heroes.add(new Thief(getName(), false));
-                    break;
-                default:
-                    heroes.add(new Peasant(getName(), false));
+                    heroes.add(new Peasant(getName(), firstTeam));
             }
         }
         return heroes;

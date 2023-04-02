@@ -1,5 +1,7 @@
 package seminar01.units;
 
+import seminar01.teams.Team;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -21,7 +23,17 @@ public abstract class Shooter extends BaseHero {
         System.out.println(enemy.getInfo() + " получил(а) урон: " + dmg);
     }
 
+    @Override
     public void step(ArrayList<BaseHero> enemyTeam) {
+        System.out.println("Ходит " + getInfo());
+        if (hp <= 0 || arrows <= 0) return;
+        BaseHero closestEnemy = findClosestEnemy(enemyTeam);
+        System.out.println("Найден ближайший противник: " + closestEnemy.getInfo());
+        shoot(closestEnemy);
+    }
+
+    @Override
+    public void step(Team<BaseHero> enemyTeam) {
         System.out.println("Ходит " + getInfo());
         if (hp <= 0 || arrows <= 0) return;
         BaseHero closestEnemy = findClosestEnemy(enemyTeam);

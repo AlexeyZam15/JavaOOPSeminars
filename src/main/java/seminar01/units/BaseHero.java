@@ -1,6 +1,7 @@
 package seminar01.units;
 
 import seminar01.Names;
+import seminar01.teams.Team;
 import seminar01.weapons.Weapons;
 
 import java.util.ArrayList;
@@ -88,6 +89,22 @@ public abstract class BaseHero implements GameInterface {
         }
         return closestEnemy;
     }
+
+    public BaseHero findClosestEnemy(Team<BaseHero> enemyTeam) {
+        BaseHero closestEnemy = enemyTeam.get(0);
+        double distance = Coords.getDistance(this.position, enemyTeam.get(0).position);
+        double minDistance = distance;
+        for (int i = 1; i < enemyTeam.size(); i++) {
+            if (enemyTeam.get(i).hp <= 0) continue;
+            distance = Coords.getDistance(this.position, enemyTeam.get(i).position);
+            if (minDistance > distance) {
+                minDistance = distance;
+                closestEnemy = enemyTeam.get(i);
+            }
+        }
+        return closestEnemy;
+    }
+
     public void getDamage(int damage) {
         if (this.hp - damage > 0) {
             this.hp -= damage;
@@ -97,6 +114,11 @@ public abstract class BaseHero implements GameInterface {
 
     @Override
     public void step(ArrayList<BaseHero> enemyTeam) {
+
+    }
+
+    @Override
+    public void step(Team<BaseHero> enemyTeam) {
 
     }
 }
