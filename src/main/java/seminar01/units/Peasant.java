@@ -19,7 +19,7 @@ public class Peasant extends BaseHero {
         super.step();
         if (Objects.equals(state, "Dead")) return;
         if (Objects.equals(this.state, "Busy")) {
-            System.out.println(getInfo() + " принёс стрелу");
+//            System.out.println(getInfo() + " принёс стрелу");
             this.state = "Stand";
         }
     }

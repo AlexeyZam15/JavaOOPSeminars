@@ -21,7 +21,7 @@ public abstract class Shooter extends BaseHero {
     protected void shoot(BaseHero enemy) {
         this.arrows--;
         int dmg = new Random().nextInt(damage[0], damage[1]);
-        System.out.println(this.getInfo() + " стреляет в " + enemy.getInfo());
+//        System.out.println(this.getInfo() + " стреляет в " + enemy.getInfo());
         enemy.getDamage(dmg);
     }
 
@@ -48,17 +48,22 @@ public abstract class Shooter extends BaseHero {
         super.step();
         if (Objects.equals(state, "Dead")) return;
         ArrayList<BaseHero> allyTeam = getAllyTeam();
-        ArrayList<BaseHero> enemyTeam = getEnemiesTeam();
+        ArrayList<BaseHero> enemyTeam = filterLiveTeam(getEnemiesTeam());
         if (enemyTeam.isEmpty()) return;
         if (hasLiveStandPeasant(allyTeam)) {
             this.arrows++;
             BaseHero peasant = getLivePeasant(allyTeam);
             peasant.state = "Busy";
-            System.out.println(getInfo() + " берёт стрелу от " + peasant.getInfo());
+//            System.out.println(getInfo() + " берёт стрелу от " + peasant.getInfo());
         }
         if (this.arrows <= 0) return;
         BaseHero closestEnemy = findClosestEnemy(enemyTeam);
         shoot(closestEnemy);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString().replace("Статус", "➶: " + arrows + " Статус");
     }
 }
 

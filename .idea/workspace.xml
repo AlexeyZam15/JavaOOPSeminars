@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar04 progress and homework04">
+      <change afterPath="$PROJECT_DIR$/src/main/java/seminar01/AnsiColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Bowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Bowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Coords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Coords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Crossbowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Rogue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/wolfy/Downloads/IntroJavaSeminars",
+    "last_opened_file_path": "C:/Users/wolfy/Downloads/JavaOOPSeminars",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -124,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680412129700</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added seminar04 progress and homework04">
+      <created>1680622201255</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622201256</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
