@@ -131,7 +131,7 @@ public class Main {
     }
 
     private static void createTeam(boolean firstTeam) {
-        new Peasant(getName(), firstTeam);
+        new Farmer(getName(), firstTeam);
         for (int i = 0; i < 9; i++) {
             int random = new Random().nextInt(7);
             switch (random) {
@@ -142,7 +142,7 @@ public class Main {
                     new Crossbowman(getName(), firstTeam);
                     break;
                 case 2:
-                    new Mage(getName(), firstTeam);
+                    new Wizard(getName(), firstTeam);
                     break;
                 case 3:
                     new Monk(getName(), firstTeam);
@@ -154,7 +154,7 @@ public class Main {
                     new Rogue(getName(), firstTeam);
                     break;
                 default:
-                    new Peasant(getName(), firstTeam);
+                    new Farmer(getName(), firstTeam);
             }
         }
     }

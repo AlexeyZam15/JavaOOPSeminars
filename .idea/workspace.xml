@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar04 progress and homework04">
-      <change afterPath="$PROJECT_DIR$/src/main/java/seminar01/AnsiColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
+    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar05 progress and homework05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Farmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/weapons/Weapons.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/wolfy/Downloads/JavaOOPSeminars",
+    "last_opened_file_path": "C:/Users/wolfy/Downloads/example",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -124,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680622201256</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added seminar05 progress and homework05">
+      <created>1680864404209</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680864404210</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,6 +145,7 @@
     <MESSAGE value="added Teams" />
     <MESSAGE value="added Team class" />
     <MESSAGE value="added seminar04 progress and homework04" />
-    <option name="LAST_COMMIT_MESSAGE" value="added seminar04 progress and homework04" />
+    <MESSAGE value="added seminar05 progress and homework05" />
+    <option name="LAST_COMMIT_MESSAGE" value="added seminar05 progress and homework05" />
   </component>
 </project>

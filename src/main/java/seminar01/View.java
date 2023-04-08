@@ -32,18 +32,16 @@ public class View {
 
     private static String getChar(int x, int y) {
         String out = "| ";
-//        System.out.println(BaseHero.getAllTeam().size());
         for (BaseHero human : BaseHero.getAllTeam()) {
             if (human.getCoords()[0] == x && human.getCoords()[1] == y) {
                 if (human.getHp() == 0) {
-                    out = "|" + (AnsiColors.ANSI_RED + human.getInfo().charAt(0) + AnsiColors.ANSI_RESET);
+                    out = "|" + (AnsiColors.ANSI_RED + human.getClassIcon() + AnsiColors.ANSI_RESET);
                     break;
                 }
-//                System.out.println(BaseHero.getDarkTeam().contains(human) + " " + BaseHero.getHolyTeam().contains(human));
                 if (BaseHero.getDarkTeam().contains(human))
-                    out = "|" + (AnsiColors.ANSI_GREEN + human.getInfo().charAt(0) + AnsiColors.ANSI_RESET);
+                    out = "|" + (AnsiColors.ANSI_GREEN +  human.getClassIcon() + AnsiColors.ANSI_RESET);
                 if (BaseHero.getHolyTeam().contains(human))
-                    out = "|" + (AnsiColors.ANSI_BLUE + human.getInfo().charAt(0) + AnsiColors.ANSI_RESET);
+                    out = "|" + (AnsiColors.ANSI_BLUE +  human.getClassIcon() + AnsiColors.ANSI_RESET);
                 break;
             }
         }
@@ -58,8 +56,8 @@ public class View {
         System.out.print(top10 + "    ");
         System.out.print(AnsiColors.ANSI_BLUE + "Blue side" + AnsiColors.ANSI_RESET);
         //for (int i = 0; i < l[0]-9; i++)
-        System.out.print(" ".repeat(l[0] - 10));
-        System.out.println(AnsiColors.ANSI_GREEN + "\tGreen side" + AnsiColors.ANSI_RESET);
+        System.out.print(" ".repeat(l[0] - 9));
+        System.out.println(AnsiColors.ANSI_GREEN + " \tGreen side" + AnsiColors.ANSI_RESET);
         for (int i = 1; i < 11; i++) {
             System.out.print(getChar(1, i));
         }

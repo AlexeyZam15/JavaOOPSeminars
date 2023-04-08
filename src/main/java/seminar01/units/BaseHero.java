@@ -1,7 +1,5 @@
 package seminar01.units;
 
-import seminar01.weapons.Weapons;
-
 import java.util.*;
 
 public abstract class BaseHero implements GameInterface {
@@ -30,8 +28,6 @@ public abstract class BaseHero implements GameInterface {
 
     protected int armor;
     protected int[] damage;
-
-    protected Weapons weapon;
 
     protected Coords position;
 
@@ -66,8 +62,8 @@ public abstract class BaseHero implements GameInterface {
 
     @Override
     public String toString() {
-        return this.getInfo() + " \uD83D\uDC97: " + this.hp + " \uD83D\uDEE1️: " + this.armor + " \uD83C\uDFBF: " +
-                this.initiative + " Статус: " + this.state
+        return this.name + " \uD83D\uDC97: " + this.hp + " \uD83D\uDEE1️: " + this.armor + " \uD83C\uDFBF: " +
+                this.initiative + " ⚔️: " + Math.round(Math.abs((damage[0] + damage[1]) / 2)) + " Статус: " + this.state
                 .replace("Dead", "\uD83D\uDC80")
                 .replace("Stand", "\uD83D\uDE42");
     }
@@ -106,7 +102,6 @@ public abstract class BaseHero implements GameInterface {
     public static int getCount() {
         return count;
     }
-
 
 
     protected BaseHero findClosestEnemy(ArrayList<BaseHero> enemyTeam) {
@@ -189,5 +184,12 @@ public abstract class BaseHero implements GameInterface {
 
     public String getState() {
         return state;
+    }
+
+    public String getClassIcon() {
+        switch (this.className) {
+            default:
+                return "" + this.className.charAt(0);
+        }
     }
 }
