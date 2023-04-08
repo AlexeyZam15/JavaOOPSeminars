@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar05 progress and homework05">
+    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="changed homework05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Farmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/weapons/Weapons.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680864404210</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changed homework05">
+      <created>1680918512468</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680918512468</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +146,7 @@
     <MESSAGE value="added Team class" />
     <MESSAGE value="added seminar04 progress and homework04" />
     <MESSAGE value="added seminar05 progress and homework05" />
-    <option name="LAST_COMMIT_MESSAGE" value="added seminar05 progress and homework05" />
+    <MESSAGE value="changed homework05" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed homework05" />
   </component>
 </project>

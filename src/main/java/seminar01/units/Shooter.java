@@ -27,7 +27,7 @@ public abstract class Shooter extends BaseHero {
 
     protected boolean hasLiveStandPeasant(ArrayList<BaseHero> allyTeam) {
         for (BaseHero hero : allyTeam) {
-            if (Objects.equals(hero.className, "Крестьянин") && Objects.equals(hero.state, "Stand")) {
+            if (Objects.equals(hero.className, "Фермер") && Objects.equals(hero.state, "Stand")) {
                 return true;
             }
         }
@@ -36,7 +36,7 @@ public abstract class Shooter extends BaseHero {
 
     protected BaseHero getLivePeasant(ArrayList<BaseHero> allyTeam) {
         for (BaseHero hero : allyTeam) {
-            if (Objects.equals(hero.className, "Крестьянин") && Objects.equals(hero.state, "Stand")) {
+            if (Objects.equals(hero.className, "Фермер") && Objects.equals(hero.state, "Stand")) {
                 return hero;
             }
         }
