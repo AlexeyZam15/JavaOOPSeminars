@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-import static seminar01.Main.getName;
+import static seminar01.Game.getName;
 
 public class Team<T extends BaseHero> implements Iterable<BaseHero>{
     ArrayList<BaseHero> heroes = new ArrayList<>();

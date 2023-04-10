@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="changed homework05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Coords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Coords.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/wolfy/Downloads/example",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/wolfy/Downloads/JavaOOPSeminars&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="seminar01" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -132,8 +142,26 @@
       <option name="project" value="LOCAL" />
       <updated>1680918512468</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="changed homework05">
+      <created>1680919271790</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680919271790</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization commit" />

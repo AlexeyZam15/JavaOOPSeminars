@@ -31,22 +31,22 @@ public abstract class BaseHero implements GameInterface {
 
     protected Coords position;
 
-    public int[] getCoords() {
-        return new int[]{position.y, position.x};
-    }
-
     protected int initiative;
 
-    protected static PriorityQueue<BaseHero> initiativeList = new PriorityQueue<>(new Comparator<>() {
-        @Override
-        public int compare(BaseHero o1, BaseHero o2) {
-            return o2.initiative - o1.initiative;
-        }
-    });
+//    protected static PriorityQueue<BaseHero> initiativeList = new PriorityQueue<>(new Comparator<>() {
+//        @Override
+//        public int compare(BaseHero o1, BaseHero o2) {
+//            return o2.initiative - o1.initiative;
+//        }
+//    });
 
     protected int id;
 
     protected static int idCounter = 0;
+
+    protected static ArrayList<BaseHero> holyTeam = new ArrayList<>();
+
+    protected static ArrayList<BaseHero> darkTeam = new ArrayList<>();
 
     protected static ArrayList<BaseHero> allTeam = new ArrayList<>();
 
@@ -56,10 +56,6 @@ public abstract class BaseHero implements GameInterface {
         return name;
     }
 
-    protected static ArrayList<BaseHero> holyTeam = new ArrayList<>();
-
-    protected static ArrayList<BaseHero> darkTeam = new ArrayList<>();
-
     @Override
     public String toString() {
         return this.name + " \uD83D\uDC97: " + this.hp + " \uD83D\uDEE1️: " + this.armor + " \uD83C\uDFBF: " +
@@ -68,30 +64,31 @@ public abstract class BaseHero implements GameInterface {
                 .replace("Stand", "\uD83D\uDE42");
     }
 
-    public String getPosition() {
-        return position.toString();
+    public Coords getPosition() {
+        return this.position;
     }
 
     public BaseHero(String className, int hp, String name, boolean team, int armor, int[] damage, int initiative) {
         this.className = className;
         this.hp = hp;
         this.name = name;
-        if (team) {
-            this.position = new Coords(lastFirstTeamX, lastFirstTeamY++);
-            holyTeam.add(this);
-        } else {
-            this.position = new Coords(lastSecondTeamX, lastSecondTeamY++);
-            darkTeam.add(this);
-        }
         this.team = team;
+        this.getAllyTeam().add(this);
+        this.setPosition();
         this.armor = armor;
         this.damage = damage;
         this.initiative = initiative;
         this.id = idCounter++;
         this.state = "Stand";
         allTeam.add(this);
-        initiativeList.add(this);
+//        initiativeList.add(this);
         count++;
+    }
+
+    protected void setPosition() {
+        if (team) {
+            this.position = new Coords(lastFirstTeamX, lastFirstTeamY++);
+        } else this.position = new Coords(lastSecondTeamX, lastSecondTeamY++);
     }
 
     @Override
@@ -140,9 +137,9 @@ public abstract class BaseHero implements GameInterface {
 //        System.out.println(text);
     }
 
-    public static PriorityQueue<BaseHero> getInitiativeList() {
-        return initiativeList;
-    }
+//    public static PriorityQueue<BaseHero> getInitiativeList() {
+//        return initiativeList;
+//    }
 
     public int getInitiative() {
         return initiative;

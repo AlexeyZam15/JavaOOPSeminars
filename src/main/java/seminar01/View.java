@@ -30,10 +30,10 @@ public class View {
                 .replace('-', '\u2500');
     }
 
-    private static String getChar(int x, int y) {
+    private static String getChar(int y, int x) {
         String out = "| ";
         for (BaseHero human : BaseHero.getAllTeam()) {
-            if (human.getCoords()[0] == x && human.getCoords()[1] == y) {
+            if (human.getPosition().getX() == x && human.getPosition().getY() == y) {
                 if (human.getHp() == 0) {
                     out = "|" + (AnsiColors.ANSI_RED + human.getClassIcon() + AnsiColors.ANSI_RESET);
                     break;
@@ -49,7 +49,7 @@ public class View {
     }
 
     public static void view() {
-        Main.printHeader("Ход №" + step);
+        Game.printHeader("Ход №" + step);
         step++;
         BaseHero.getAllTeam().forEach((v) -> l[0] = Math.max(l[0], v.toString().length()));
 //        System.out.println("");
