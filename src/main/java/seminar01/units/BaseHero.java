@@ -4,19 +4,11 @@ import java.util.*;
 
 public abstract class BaseHero implements GameInterface {
 
-    protected static int count;
-
     protected String className;
 
     protected boolean team;
 
     protected String name;
-
-    protected static int lastFirstTeamX = 1;
-    protected static int lastFirstTeamY = 1;
-
-    protected static int lastSecondTeamX = 10;
-    protected static int lastSecondTeamY = 1;
 
     protected int hp;
 
@@ -42,15 +34,38 @@ public abstract class BaseHero implements GameInterface {
 
     protected int id;
 
-    protected static int idCounter = 0;
-
-    protected static ArrayList<BaseHero> holyTeam = new ArrayList<>();
-
-    protected static ArrayList<BaseHero> darkTeam = new ArrayList<>();
-
-    protected static ArrayList<BaseHero> allTeam = new ArrayList<>();
-
     protected String state;
+
+    protected static int idCounter;
+
+    protected static ArrayList<BaseHero> holyTeam;
+
+    protected static ArrayList<BaseHero> darkTeam;
+
+    protected static ArrayList<BaseHero> allTeam;
+
+    protected static int count;
+
+    protected static int lastFirstTeamX;
+    protected static int lastFirstTeamY;
+
+    protected static int lastSecondTeamX;
+    protected static int lastSecondTeamY;
+
+    {
+        state = "Stand";
+    }
+
+    static {
+        idCounter = 0;
+        holyTeam = new ArrayList<>();
+        darkTeam = new ArrayList<>();
+        allTeam = new ArrayList<>();
+        lastFirstTeamX = 1;
+        lastFirstTeamY = 1;
+        lastSecondTeamX = 10;
+        lastSecondTeamY = 1;
+    }
 
     public String getHeroName() {
         return name;
@@ -61,7 +76,8 @@ public abstract class BaseHero implements GameInterface {
         return this.name + " \uD83D\uDC97: " + this.hp + " \uD83D\uDEE1️: " + this.armor + " \uD83C\uDFBF: " +
                 this.initiative + " ⚔️: " + Math.round(Math.abs((damage[0] + damage[1]) / 2)) + " Статус: " + this.state
                 .replace("Dead", "\uD83D\uDC80")
-                .replace("Stand", "\uD83D\uDE42");
+                .replace("Stand", "\uD83D\uDE42")
+                + " x" + position.x + " y" + position.y;
     }
 
     public Coords getPosition() {
@@ -79,7 +95,6 @@ public abstract class BaseHero implements GameInterface {
         this.damage = damage;
         this.initiative = initiative;
         this.id = idCounter++;
-        this.state = "Stand";
         allTeam.add(this);
 //        initiativeList.add(this);
         count++;
@@ -188,5 +203,14 @@ public abstract class BaseHero implements GameInterface {
             default:
                 return "" + this.className.charAt(0);
         }
+    }
+
+    protected boolean checkPosition(int pos_x, int pos_y) {
+        if (pos_x > 10 || pos_y > 10 || pos_x < 1 || pos_y < 1)
+            return false;
+        for (BaseHero hero: getAllyTeam())
+            if (hero.position.x == pos_x && hero.position.y == pos_y)
+                return false;
+        return true;
     }
 }

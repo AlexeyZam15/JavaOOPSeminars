@@ -34,15 +34,16 @@ public class View {
         String out = "| ";
         for (BaseHero human : BaseHero.getAllTeam()) {
             if (human.getPosition().getX() == x && human.getPosition().getY() == y) {
-                if (human.getHp() == 0) {
-                    out = "|" + (AnsiColors.ANSI_RED + human.getClassIcon() + AnsiColors.ANSI_RESET);
-                    break;
-                }
-                if (BaseHero.getDarkTeam().contains(human))
-                    out = "|" + (AnsiColors.ANSI_GREEN +  human.getClassIcon() + AnsiColors.ANSI_RESET);
-                if (BaseHero.getHolyTeam().contains(human))
-                    out = "|" + (AnsiColors.ANSI_BLUE +  human.getClassIcon() + AnsiColors.ANSI_RESET);
-                break;
+                if (human.getHp() != 0) {
+                    if (BaseHero.getDarkTeam().contains(human)) {
+                        out = "|" + (AnsiColors.ANSI_GREEN + human.getClassIcon() + AnsiColors.ANSI_RESET);
+                        break;
+                    }
+                    if (BaseHero.getHolyTeam().contains(human)) {
+                        out = "|" + (AnsiColors.ANSI_BLUE + human.getClassIcon() + AnsiColors.ANSI_RESET);
+                        break;
+                    }
+                } else out = "|" + (AnsiColors.ANSI_RED + human.getClassIcon() + AnsiColors.ANSI_RESET);
             }
         }
         return out;
