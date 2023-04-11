@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="changed project structure">
+    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added seminar06 progress">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Spellcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Farmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681109793956</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added seminar06 progress">
+      <created>1681205594055</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681205594055</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +199,8 @@
     <MESSAGE value="added seminar05 progress and homework05" />
     <MESSAGE value="changed homework05" />
     <MESSAGE value="changed project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed project structure" />
+    <MESSAGE value="added seminar06 progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="added seminar06 progress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

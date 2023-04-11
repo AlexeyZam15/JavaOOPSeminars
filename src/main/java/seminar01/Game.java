@@ -2,6 +2,8 @@ package seminar01;
 
 import seminar01.units.*;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Game {
@@ -14,23 +16,28 @@ public class Game {
     }
 
     public void startGame() {
+        try (FileWriter writer = new FileWriter("actionsLog.txt", false)) {
+            ;
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
         printHeader("Игра начинается");
         Scanner scanner = new Scanner(System.in);
         String input = "";
         int turnsCounter = 0;
         createTeams();
+        View.view();
         while (!gameEnded() && !Objects.equals(input, "q")) {
             System.out.println("Нажмите enter для продолжения, или введите q для выхода");
             input = scanner.nextLine();
             if (Objects.equals(input, "q")) break;
-            View.view();
             turnsCounter++;
 //            System.out.println("Ход №" + turnsCounter);
 //            showTeams();
             teamsMakeTurns();
+            View.view();
         }
         if (gameEnded()) {
-            View.view();
             printHeader("Игра закончена");
             printWin();
         }
@@ -99,7 +106,7 @@ public class Game {
         return indexes;
     }
 
-     protected int[] getIndexesArray(ArrayList<BaseHero> AllHeroes) {
+    protected int[] getIndexesArray(ArrayList<BaseHero> AllHeroes) {
         int[] orderIndexes = new int[AllHeroes.size()];
         int i = 0;
         for (BaseHero hero : AllHeroes) {

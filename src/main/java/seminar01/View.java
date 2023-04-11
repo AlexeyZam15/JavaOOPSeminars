@@ -5,7 +5,7 @@ import seminar01.units.BaseHero;
 import java.util.Collections;
 
 public class View {
-    private static int step = 1;
+    private static int step = 0;
     private static final int[] l = {0};
     private static final String top10 = formatDiv("a") + String.join("", Collections.nCopies(9, formatDiv("-b"))) + formatDiv("-c");
     private static final String midl10 = formatDiv("d") + String.join("", Collections.nCopies(9, formatDiv("-e"))) + formatDiv("-f");
