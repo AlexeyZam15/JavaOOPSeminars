@@ -50,7 +50,7 @@ public class View {
     }
 
     public static void view() {
-        Game.printHeader("Ход №" + step);
+        Main.printHeader("Ход №" + step);
         step++;
         BaseHero.getAllTeam().forEach((v) -> l[0] = Math.max(l[0], v.toString().length()));
 //        System.out.println("");

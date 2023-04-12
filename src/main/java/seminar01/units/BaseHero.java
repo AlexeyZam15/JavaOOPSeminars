@@ -280,4 +280,8 @@ public abstract class BaseHero implements GameInterface {
         }
         return lowestHpAlly;
     }
+
+    public int[] getCoords(){
+        return new int[]{position.y, position.x};
+    }
 }
