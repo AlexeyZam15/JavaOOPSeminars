@@ -1,5 +1,6 @@
 package seminar01;
 
+import seminar01.teams.Team;
 import seminar01.units.*;
 
 import java.io.FileWriter;
@@ -8,9 +9,9 @@ import java.util.*;
 
 public class Main {
 
-    static ArrayList<BaseHero> allTeam = BaseHero.getAllTeam();
-    static ArrayList<BaseHero> holyTeam = BaseHero.getHolyTeam();
-    static ArrayList<BaseHero> darkTeam = BaseHero.getDarkTeam();
+    static Team<BaseHero> allTeam = BaseHero.getAllTeam();
+    static Team<BaseHero> holyTeam = BaseHero.getHolyTeam();
+    static Team<BaseHero> darkTeam = BaseHero.getDarkTeam();
 
     public static void main(String[] args) {
         Main game = new Main();
@@ -66,7 +67,7 @@ public class Main {
     public void teamsMakeTurns() {
 //        Scanner scanner = new Scanner(System.in);
         int[] orderIndexes = getSortedIndexList();
-        ArrayList<BaseHero> allHeroesList = BaseHero.getAllTeam();
+        Team<BaseHero> allHeroesList = BaseHero.getAllTeam();
 //        printHeader("Ходы");
         for (int id : orderIndexes) {
 //            scanner.nextLine();
@@ -89,7 +90,7 @@ public class Main {
     }
 
     protected void printInitiativeList(int[] orderIndexes) {
-        ArrayList<BaseHero> allHeroesList = BaseHero.getAllTeam();
+        Team<BaseHero> allHeroesList = BaseHero.getAllTeam();
         for (int id : orderIndexes) {
             BaseHero hero = allHeroesList.get(id);
             System.out.println(hero.getInfo() + " Инициатива: " + hero.getInitiative());
@@ -97,7 +98,7 @@ public class Main {
     }
 
     protected int[] getSortedIndexList() {
-        ArrayList<BaseHero> allHeroesList = BaseHero.getAllTeam();
+        Team<BaseHero> allHeroesList = BaseHero.getAllTeam();
         int[] indexes = getIndexesArray(BaseHero.getAllTeam());
         for (int count = 0; count < indexes.length; count++) {
             boolean sorted = true;
@@ -115,7 +116,7 @@ public class Main {
         return indexes;
     }
 
-    protected int[] getIndexesArray(ArrayList<BaseHero> AllHeroes) {
+    protected int[] getIndexesArray(Team<BaseHero> AllHeroes) {
         int[] orderIndexes = new int[AllHeroes.size()];
         int i = 0;
         for (BaseHero hero : AllHeroes) {

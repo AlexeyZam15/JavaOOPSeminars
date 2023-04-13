@@ -1,5 +1,7 @@
 package seminar01.units;
 
+import seminar01.teams.Team;
+
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
@@ -29,8 +31,8 @@ public abstract class Shooter extends BaseHero {
     @Override
     public void step() {
         if (Objects.equals(state, "Dead")) return;
-        ArrayList<BaseHero> allyTeam = getAllyTeam();
-        ArrayList<BaseHero> enemyTeam = filterLiveTeam(getEnemyTeam());
+        Team<BaseHero> allyTeam = getAllyTeam();
+        Team<BaseHero> enemyTeam = filterLiveTeam(getEnemyTeam());
         if (enemyTeam.isEmpty()) return;
         turnBegin();
         if (hasLiveAlly("Фермер") && arrows != maxArrows) {

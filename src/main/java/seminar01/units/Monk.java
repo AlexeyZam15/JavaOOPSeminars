@@ -1,13 +1,9 @@
 package seminar01.units;
 
-import seminar01.Spells;
-
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Monk extends Spellcaster {
-
-    protected ArrayList<Spells> spellsBook;
 
     public Monk(String name, boolean firstTeam) {
         super("Монах", 50, name, firstTeam, 5, new int[]{2, 4}, 8, 40);

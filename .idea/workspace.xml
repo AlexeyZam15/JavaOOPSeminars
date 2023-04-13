@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added homework06">
+    <list default="true" id="1c8b5139-398e-4f6b-b06c-13f36c8ef843" name="Changes" comment="added Team class, replaces ArrayLists with Teams">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Game.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/SpellBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/Spells.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/teams/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Spellcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Spellcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seminar01/units/Wizard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681229378806</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added originalView">
+      <created>1681271422954</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681271422954</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +210,9 @@
     <MESSAGE value="changed project structure" />
     <MESSAGE value="added seminar06 progress" />
     <MESSAGE value="added homework06" />
-    <option name="LAST_COMMIT_MESSAGE" value="added homework06" />
+    <MESSAGE value="added originalView" />
+    <MESSAGE value="added Team class, replaces ArrayLists with Teams" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Team class, replaces ArrayLists with Teams" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
