@@ -1,6 +1,5 @@
 package seminar01.units;
 
-import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
@@ -17,7 +16,7 @@ public abstract class Infantry extends BaseHero {
     @Override
     public void step() {
         if (Objects.equals(state, "Dead")) return;
-        if (filterLiveTeam(getEnemyTeam()).isEmpty()) return;
+        if (filterVisibleTeam(getEnemyTeam()).isEmpty()) return;
         BaseHero closestEnemy = findClosestEnemy();
         Coords enemyPosition = closestEnemy.getPosition();
         double distance = Coords.getDistance(position, enemyPosition);

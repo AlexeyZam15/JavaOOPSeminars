@@ -125,7 +125,7 @@ public abstract class BaseHero implements GameInterface {
 
 
     protected BaseHero findClosestEnemy() {
-        Team<BaseHero> enemyTeam = filterLiveTeam(getEnemyTeam());
+        Team<BaseHero> enemyTeam = filterVisibleTeam(getEnemyTeam());
         BaseHero closestEnemy = enemyTeam.get(0);
         double distance = Coords.getDistance(this.position, enemyTeam.get(0).position);
         double minDistance = distance;
@@ -200,13 +200,22 @@ public abstract class BaseHero implements GameInterface {
         return holyTeam;
     }
 
-    public static Team<BaseHero> filterLiveTeam(Team<BaseHero> team) {
+    public static Team<BaseHero> filterVisibleTeam(Team<BaseHero> team) {
         Team<BaseHero> liveTeam = new Team<>();
         for (BaseHero hero : team) {
             if (Objects.equals(hero.state, "Stand")) liveTeam.add(hero);
         }
         return liveTeam;
     }
+
+    public static Team<BaseHero> filterLiveTeam(Team<BaseHero> team) {
+        Team<BaseHero> liveTeam = new Team<>();
+        for (BaseHero hero : team) {
+            if (!Objects.equals(hero.state, "Dead")) liveTeam.add(hero);
+        }
+        return liveTeam;
+    }
+
 
     public static Team<BaseHero> getHolyTeam() {
         return holyTeam;
@@ -230,7 +239,7 @@ public abstract class BaseHero implements GameInterface {
     protected boolean checkPosition(int pos_x, int pos_y) {
         if (pos_x > 10 || pos_y > 10 || pos_x < 1 || pos_y < 1)
             return false;
-        for (BaseHero hero : getAllyTeam())
+        for (BaseHero hero : filterVisibleTeam(getAllyTeam()))
             if (hero.position.x == pos_x && hero.position.y == pos_y)
                 return false;
         return true;
@@ -264,14 +273,14 @@ public abstract class BaseHero implements GameInterface {
     }
 
     protected boolean hasInjuredAlly() {
-        for (BaseHero hero : filterLiveTeam(getAllyTeam())) {
-            if (hero.maxHp != hp) return true;
+        for (BaseHero hero : filterVisibleTeam(getAllyTeam())) {
+            if (hero.maxHp != hp && hero != this) return true;
         }
         return false;
     }
 
     protected BaseHero findLowestHpAlly() {
-        Team<BaseHero> allyTeam = filterLiveTeam(getAllyTeam());
+        Team<BaseHero> allyTeam = filterVisibleTeam(getAllyTeam());
         int maxHpDiff = allyTeam.get(0).maxHp - allyTeam.get(0).hp;
         BaseHero lowestHpAlly = allyTeam.get(0);
         for (BaseHero hero : allyTeam) {
@@ -283,7 +292,7 @@ public abstract class BaseHero implements GameInterface {
         return lowestHpAlly;
     }
 
-    public int[] getCoords(){
+    public int[] getCoords() {
         return new int[]{position.y, position.x};
     }
 }

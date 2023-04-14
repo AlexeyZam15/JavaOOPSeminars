@@ -16,7 +16,7 @@ public class Farmer extends BaseHero {
     @Override
     public void step() {
         if (Objects.equals(state, "Dead")) return;
-        if (filterLiveTeam(getEnemyTeam()).isEmpty()) return;
+        if (filterVisibleTeam(getEnemyTeam()).isEmpty()) return;
         turnBegin();
         if (Objects.equals(this.state, "Busy")) {
             log(getInfo() + " пополнил запасы");

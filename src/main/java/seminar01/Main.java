@@ -58,7 +58,7 @@ public class Main {
     }
 
     protected void printWin() {
-        if (BaseHero.filterLiveTeam(BaseHero.getHolyTeam()).isEmpty())
+        if (BaseHero.filterVisibleTeam(BaseHero.getHolyTeam()).isEmpty())
             printHeader("Все персонажи в первой команде мертвы\nПобедила вторая команда");
         else
             printHeader("Все персонажи во второй команде мертвы\nПобедила первая команда");

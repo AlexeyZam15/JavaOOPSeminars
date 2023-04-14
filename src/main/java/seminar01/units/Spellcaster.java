@@ -2,7 +2,6 @@ package seminar01.units;
 
 import seminar01.teams.Team;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public abstract class Spellcaster extends BaseHero {
@@ -29,7 +28,7 @@ public abstract class Spellcaster extends BaseHero {
     @Override
     public void step() {
         if (Objects.equals(state, "Dead")) return;
-        if (filterLiveTeam(getEnemyTeam()).isEmpty()) return;
+        if (filterVisibleTeam(getEnemyTeam()).isEmpty()) return;
         turnBegin();
         Team<BaseHero> allyTeam = getAllyTeam();
         if (hasLiveAlly("Фермер") && mana + 25 < maxMana) {
